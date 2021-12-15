@@ -1,0 +1,355 @@
+JSON
+ 4. Создать внешний репозиторий c названием JSON.
+ github.com > new 
+  5. Клонировать репозиторий JSON на локальный компьютер.
+  https://github.com/andreukh/json > code > SSH
+  git clone
+ 6. Внутри локального JSON создать файл “new.json”.
+ $ cd json && > new.json
+ 7. Добавить файл под гит.
+ git add .
+ 8. Закоммитить файл.
+ git commit -m "add new.json"
+ 9. Отправить файл на внешний GitHub репозиторий.
+ $ git push
+ 10. Отредактировать содержание файла “new.json” - написать информацию о себе (ФИО, возраст, количество домашних животных, будущая желаемая зарплата). Всё написать в формате JSON.
+ vim new.json
+ [
+ 	{
+	"Name":"Andreu",
+	"Surname":"Khomutov",
+	"Patronymic":"Aleksandrovich"
+	}
+]
+
+{	
+	"Age":"31",
+	"Pet":"No",
+	"Future desired salary":"100 000"
+}
+:wq
+
+ 11. Отправить изменения на внешний репозиторий.
+ $ git commit -am "add informaion"
+$ git push
+
+ 12. Создать файл preferences.json
+ touch preferences.json
+ 
+ 13. В файл preferences.json добавить информацию о своих предпочтениях (Любимый фильм, любимый сериал, любимая еда, любимое время года, сторона которую хотели бы посетить) в формате JSON.
+ vim preferenes.json
+ {
+	"Favorite movie":"Lord of the rings",
+	"Favorite TV show":"Discovery channel",
+	"Favorite food":"Sea bass fillet",
+	"Favorite season":"Summer",
+	"Country you would like to visit":"Irish"
+}
+:wq
+
+ 14. Создать файл sklls.json добавить информацию о скиллах которые будут изучены на курсе в формате JSON
+ $ > skills.json && vim skills.json
+{ 	
+	"1":"Базовая теория. (Что такое тестирование, багрепорты, документация, виды, методы, направления тестирования и т.п.) SDLC, STLC.",
+	"2":"Что такое клиент-серверная архитектура.",
+	"3":"HTTP Методы запросов на сервер.",
+	"4":"Коды ответов HTTP сервера.",
+	"5":"Структуры HTTP запросов и ответов.",
+	"6":"Что такое JSON, XML. Их структура.",
+	"7":"Тестирование API через Postman (JS, автотесты API).",
+	"8":"Снятие и чтение логов c внешнего сервера.",
+	"9":"Снифинг http web трафика через Charles и Fiddler.",
+	"10":"Dev Tools веб браузеров (Google Chrome, FireFox).",
+	"11":"VPN. (Как работает, зачем нужен, как использовать, варианты инструментов)",
+	"12":"Мобильное тестирование.",
+	"13":"Особенность iOS, Android, гайдлайны.",
+	"14":"Сборка iOS приложений на XCode. (У кого нет Mac компьютера, просто посмотрят)",
+	"15":"Сборка Android приложений на Android Studio.",
+	"16":"ADB (управление андройд девайсами)",
+	"17":"Настройка прокси и vpn на iOS и Android.",
+	"18":"Перехват (сниффинг) мобильного трафика через Charles и Fiddler на iOS и Android.",
+	"19":"Командная строка (terminal) Linux (копирование, создание, просмотр, перемещение файлов на серверах без графического интерфейса)",
+	"20":"Основы bash скриптинг, автоматизация рутинных задач на сервере.",
+	"21":"Доступ к удалённым серверам.",
+	"22":"Основы SQL (Create, Delete, Drop, Insert Into, Select, From, Where, Join).",
+	"23":"База данных Postgres (установка, настройка и использование).",
+	"24":"Нереляционная база данных Redis (установка, настройка и использование).",
+	"25":"Нагрузочное тестирование в Jmeter.",
+	"26":"Методология разработки Scrum.",
+	"27":"Python. (Изучение основ. Создание клиент серверного приложения)"
+}
+ 
+ 15. Отправить сразу 2 файла на внешний репозиторий.
+ $ git add .
+$ git commit -m "add preferens.json and skills.json"
+$ git push
+
+ 16. На веб интерфейсе создать файл bug_report.json.
+  https://github.com/andreukh/json/ > add file
+  
+ 17. Сделать Commit changes (сохранить) изменения на веб интерфейсе.
+Commit new file > add bug report
+
+ 18. На веб интерфейсе модифицировать файл bug_report.json, добавить баг репорт в формате JSON.
+ https://github.com/andreukh/json/blob/main/bug_report.json. > Edit this file >
+ 
+ {
+  "Summaru":"There are no registration fields in the main menu at the entrance",
+  "Project":"Autochess Standalone",
+  "Component":"Main Menu",
+   "Version":"17.28",
+   "Severity":"S1",
+   "Priority":"P1",
+   "Status":"New",
+   "Environment":"Windows 7 Pro SP1 version 6.1 build 7601",
+   "Steps to reproduce": "1) Open Auto chess
+                          2) Click on main menu",
+   "Expected result":"There are registration fields in the main menu",
+   "Result": "Registration fields missing"
+   }
+   
+ 19. Сделать Commit changes (сохранить) изменения на веб интерфейсе.
+ Commit changes > add content in bug_report.json
+ 
+ 20. Синхронизировать внешний и локальный репозиторий JSON
+$ gtt fetch
+$ git pull
+
+
+
+XML
+ 21. Создать внешний репозиторий c названием XML.
+ github.com > new 
+ 
+ 22. Клонировать репозиторий XML на локальный компьютер.
+$ git clone https://github.com/andreukh/XML.git
+
+ 23. Внутри локального XML создать файл “new.xml”.
+ $ > new.xml 
+ 
+ 24. Добавить файл под гит.
+ git add new.xml
+ 
+ 25. Закоммитить файл.
+ $ commit -m "add new.xml"
+
+ 26. Отправить файл на внешний GitHub репозиторий.
+ $ git push
+
+ 27. Отредактировать содержание файла “new.xml” - написать информацию о себе (ФИО, возраст, количество домашних животных, будущая желаемая зарплата). Всё написать в формате XML.
+<?xml version="1.0" encoding="UTF-8"?>
+        <NSP>
+                <Name> Name: Andreu </Name>
+        								<Surname> Surname:Khomutov </Surname>
+                <Patronymic> Patronymic:Aleksandrovich </Patronymic>
+        </NSP>
+        <Other>
+                <Age> Age:31 </Age>
+                <Pet> Pet:No </Pet>
+                <Future_desired_salary currency = "RUR"> Future desired salary :100 000 </Future_desired_salary>
+        </Other>
+
+
+ 28. Отправить изменения на внешний репозиторий.
+ $ git commit -am "add diskription to new.xml"
+$ git push
+
+ 29. Создать файл preferences.xml
+ > preferences.xml
+ 30. В файл preferences.xml добавить информацию о своих предпочтениях (Любимый фильм, любимый сериал, любимая еда, любимое время года, сторона которую хотели бы посетить) в формате XML.
+ vim preferences.xml
+ <?xml version="1.0" encoding="UTF-8"?>
+	<string name="preferences">
+		Favorite movie - Lord of the rings
+		
+		Favorite TV show - Discovery channel 
+		
+		Favorite food - Sea bass fillet 
+		
+		Favorite season - Summer 
+		
+		Country you(I?) would like to visit - Irish
+	</string>
+:wq
+ 
+ 31. Создать файл sklls.xml добавить информацию о скиллах которые будут изучены на курсе в формате XML
+ vim skills.xml
+ <?xml version="1.0" encoding="UTF-8"?>	
+
+	<1>1)Базовая теория. (Что такое тестирование, багрепорты, документация, виды, методы, направления тестирования и т.п.) SDLC, STLC.</1>
+	<2>2)Что такое клиент-серверная архитектура.,
+	<3>3)HTTP Методы запросов на сервер.</3>
+	<4>4)Коды ответов HTTP сервера.</4>
+	<5>5)Структуры HTTP запросов и ответов.</5>
+		<6>6)Что такое JSON, XML. Их структура.</6>
+	<7>7)Тестирование API через Postman (JS, автотесты API).</7>
+	<8>8)Снятие и чтение логов c внешнего сервера.</8>
+	<9>9)Снифинг http web трафика через Charles и Fiddler.</9>
+	<10>10)Dev Tools веб браузеров (Google Chrome, FireFox).</10>
+	<string>
+	11)VPN. (Как работает, зачем нужен, как использовать, варианты инструментов),
+	12)Мобильное тестирование.,
+	13)Особенность iOS, Android, гайдлайны.,
+	14)Сборка iOS приложений на XCode. (У кого нет Mac компьютера, просто посмотрят),
+	15)Сборка Android приложений на Android Studio.,
+	16)ADB (управление андройд девайсами),
+	17)Настройка прокси и vpn на iOS и Android.,
+	18)Перехват (сниффинг) мобильного трафика через Charles и Fiddler на iOS и Android.,
+	19)Командная строка (terminal) Linux (копирование, создание, просмотр, перемещение файлов на серверах без графического интерфейса),
+	20)Основы bash скриптинг, автоматизация рутинных задач на сервере.,
+	21)Доступ к удалённым серверам.,
+	22)Основы SQL (Create, Delete, Drop, Insert Into, Select, From, Where, Join).,
+	23)База данных Postgres (установка, настройка и использование).,
+	24)Нереляционная база данных Redis (установка, настройка и использование).,
+	25)Нагрузочное тестирование в Jmeter.,
+	26)Методология разработки Scrum.,
+	27)Python. (Изучение основ. Создание клиент серверного приложения)
+</string>
+
+ 32. Сделать коммит в одну строку.
+ $ git commit -am "add description to preference.xml and file skills.xml"
+
+ 33. Отправить сразу 2 файла на внешний репозиторий.
+ git push
+ 
+ 34. На веб интерфейсе создать файл bug_report.xml.
+   https://github.com/andreukh/xml/> add file
+  
+ 35. Сделать Commit changes (сохранить) изменения на веб интерфейсе.
+ create file > save
+ 
+ 36. На веб интерфейсе модифицировать файл bug_report.xml, добавить баг репорт в формате XML.
+ https://github.com/andreukh/XML/blob/main/bug_report.xml > edit
+ <?xml version="1.0" encoding="UTF-8"?>
+
+  <1>Summaru - There are no registration fields in the main menu at the entrance </1>
+  <2>Project - Autochess Standalone </2>
+<3>Component - Main Menu </3>
+   <4>Version - 17.28 </4>
+<5>Severity - S1 </5>
+<6>Priority - P1 </6>
+<7>Status - New </7>
+<8>Environment - Windows 7 Pro SP1 version 6.1 build 7601 </8>
+   <9>Steps to reproduce  1) Open Auto chess
+                          2) Click on main menu </9>
+<10>Expected result - There are registration fields in the main menu </10>
+<11>Result - Registration fields missing</11>
+
+
+
+ 37. Сделать Commit changes (сохранить) изменения на веб интерфейсе.
+ Commit changes: add bug report
+ 
+ 38. Синхронизировать внешний и локальный репозиторий XML
+$ git fetch
+$ git pull
+
+ TXT
+ 1. Создать внешний репозиторий c названием TXT.
+ github.com > new
+ 
+ 2. Клонировать репозиторий TXT на локальный компьютер.
+ git clone https://github.com/andreukh/txt.git
+ 
+ 3. Внутри локального TXT создать файл “new.txt”.
+ > new.txt
+ 
+ 4. Добавить файл под гит.
+ git add new.txt
+ 
+ 5. Закоммитить файл.
+ git commit -m "add new.txt"
+ 
+ 6. Отправить файл на внешний GitHub репозиторий.
+ git push
+ 
+ 7. Отредактировать содержание файла “new.txt” - написать информацию о себе (ФИО, возраст, количество домашних животных, будущая желаемая зарплата). Всё написать в формате TXT.
+ vim new.txt
+ Name - Andreu
+Surname - Khomutov
+Patronymic - Aleksandrovich
+Age - 31
+Pet - No 
+Future desired salary - 100 000}
+
+ 8. Отправить изменения на внешний репозиторий.
+ git commit -m "add descriptin to new.txt"
+ 
+ 9. Создать файл preferences.txt
+ > preferences.txt
+ 
+ 10. В файл preferences.txt” добавить информацию о своих предпочтениях (Любимый фильм, любимый сериал, любимая еда, любимое время года, сторона которую хотели бы посетить) в формате TXT.
+ vim preferences.txt
+ i
+ Favorite movie-Lord of the rings
+Favorite TV show-Discovery channel
+Favorite food-Sea bass fillet
+Favorite season-Summer
+Country you would like to visit-rish
+:wq
+
+ 11. Создать файл sklls.txt добавить информацию о скиллах которые будут изучены на курсе в формате TXT
+ >skills.txt && vim skills.txt
+ i
+ 
+	1)Базовая теория. (Что такое тестирование, багрепорты, документация, виды, методы, направления тестирования и т.п.) SDLC, STLC.,
+	2)Что такое клиент-серверная архитектура.,
+	3)HTTP Методы запросов на сервер.,
+	4)Коды ответов HTTP сервера.,
+	5)Структуры HTTP запросов и ответов.,
+	6)Что такое JSON, XML. Их структура.,
+	7)Тестирование API через Postman (JS, автотесты API).,
+	8)Снятие и чтение логов c внешнего сервера.,
+	9)Снифинг http web трафика через Charles и Fiddler.,
+	10)Dev Tools веб браузеров (Google Chrome, FireFox).,
+	11)VPN. (Как работает, зачем нужен, как использовать, варианты инструментов),
+	12)Мобильное тестирование.,
+	13)Особенность iOS, Android, гайдлайны.,
+	14)Сборка iOS приложений на XCode. (У кого нет Mac компьютера, просто посмотрят),
+	15)Сборка Android приложений на Android Studio.,
+	16)ADB (управление андройд девайсами),
+	17)Настройка прокси и vpn на iOS и Android.,
+	18)Перехват (сниффинг) мобильного трафика через Charles и Fiddler на iOS и Android.,
+	19)Командная строка (terminal) Linux (копирование, создание, просмотр, перемещение файлов на серверах без графического интерфейса),
+	20)Основы bash скриптинг, автоматизация рутинных задач на сервере.,
+	21)Доступ к удалённым серверам.,
+	22)Основы SQL (Create, Delete, Drop, Insert Into, Select, From, Where, Join).,
+	23)База данных Postgres (установка, настройка и использование).,
+	24)Нереляционная база данных Redis (установка, настройка и использование).,
+	25)Нагрузочное тестирование в Jmeter.,
+	26)Методология разработки Scrum.,
+	27)Python. (Изучение основ. Создание клиент серверного приложения)
+:wq
+
+ 12. Сделать коммит в одну строку.
+ $ git commit -am "add preferences.txt and skills.txt"
+
+ 13. Отправить сразу 2 файла на внешний репозиторий.
+ git push
+ 
+ 14. На веб интерфейсе создать файл bug_report.txt.
+ https://github.com/andreukh/txt/tree/main > add file
+ 
+ 15. Сделать Commit changes (сохранить) изменения на веб интерфейсе.
+ Commit changes > create new file
+ 
+ 16. На веб интерфейсе модифицировать файл bug_report.txt, добавить баг репорт в формате TXT.
+ https://github.com/andreukh/txt/blob/main/bug_report.txt > edit this file
+  Summaru:There are no registration fields in the main menu at the entrance,
+  Project:Autochess Standalone,
+  Component:Main Menu,
+   Version:17.28,
+   Severity:S1,
+   Priority:P1,
+   Status:New,
+   Environment:Windows 7 Pro SP1 version 6.1 build 7601,
+   Steps to reproduce: 1) Open Auto chess
+                          2) Click on main menu,
+   Expected result:There are registration fields in the main menu,
+   Result: Registration fields missing
+   
+ 17. Сделать Commit changes (сохранить) изменения на веб интерфейсе.
+ Commit changes > add decs to bug_report
+ 18. Синхронизировать внешний и локальный репозиторий TXT
+ git fetch
+ git pull
