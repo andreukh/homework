@@ -414,6 +414,107 @@
 				}
 			},
 			"response": []
+		},
+		{
+			"name": "5.0",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"\r",
+							"// Sesn req\r",
+							"pm.test(\"req\", function (){\r",
+							"pm.sendRequest(\"http://162.55.220.72:5005/user_ingo_2\", (error, response) => {\r",
+							"  if (error) {\r",
+							"    console.log(error);\r",
+							"  } else {\r",
+							"  console.log(response);\r",
+							"  }\r",
+							"})\r",
+							"})\r",
+							"\r",
+							"//Code 200\r",
+							"pm.test (\"Code 200\", function (){\r",
+							"    pm.response.to.have.status(200)\r",
+							"})\r",
+							"\r",
+							"// Parse resp\r",
+							"var resp = JSON.parse(responseBody)\r",
+							"//Parse req \r",
+							"var req = request.data\r",
+							"\r",
+							"//  Проверить, что json response имеет параметр start_qa_salary\r",
+							"// 9. Проверить, что json response имеет параметр qa_salary_after_6_months\r",
+							"// 10. Проверить, что json response имеет параметр qa_salary_after_12_months\r",
+							"// 11. Проверить, что json response имеет параметр qa_salary_after_1.5_year\r",
+							"// 12. Проверить, что json response имеет параметр qa_salary_after_3.5_years\r",
+							"\r",
+							"pm.test(\"start salary\", function () {\r",
+							"    pm.expect(pm.response.text()).to.include(\"start_qa_salary\");\r",
+							"});\r",
+							"pm.test(\"qa_salary_after_6_months\", function(){\r",
+							"    pm.expect(resp).to.include.key(\"qa_salary_after_6_months\")\r",
+							"})\r",
+							"pm.test(\"qa_salary_after_12_months\", function(){\r",
+							"    pm.expect(resp).to.include.key(\"qa_salary_after_12_months\")\r",
+							"})"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "name",
+							"value": "{{name}}",
+							"type": "text"
+						},
+						{
+							"key": "age",
+							"value": "{{age}}",
+							"type": "text"
+						},
+						{
+							"key": "salary",
+							"value": "{{salary}}",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{url}}/user_info_2",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"user_info_2"
+					],
+					"query": [
+						{
+							"key": "name",
+							"value": "{{name}}",
+							"disabled": true
+						},
+						{
+							"key": "age",
+							"value": "{{age}}",
+							"disabled": true
+						},
+						{
+							"key": "salary",
+							"value": "{{salaru}}",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
 		}
 	]
 }
