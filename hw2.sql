@@ -106,10 +106,9 @@ values (1000),
 		(2100),
 		(2200),
 		(2300),
-		(2400),
-		(2500);
-
---select * from salary;
+		(2400);
+		
+select * from salary;
 
 --	Создать таблицу employee_salary
 --- id. Serial  primary key,
