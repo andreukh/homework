@@ -183,10 +183,36 @@ select s.monthly_salary, e.employee_name, r.role_name
  	left join roles r on re.role_id = r.id 
  		where r.role_name like '%QA%';
 -- 25. Вывести количество QA инженеров
+ select count(r.role_name) from roles r
+ 	join roles_employee re on r.id = re.role_id 
+ 	join employees e on re.employee_id = e.id 
+ 		 where r.role_name like '%QA%';
+ 	
 -- 26. Вывести количество Middle специалистов.
+ select count(r.role_name) from roles r 
+ 	join roles_employee re on re.role_id =r.id 
+ 	join employees e on re.employee_id = e.id 
+ 		where r.role_name like '%Middle%';
+ 		
 -- 27. Вывести количество разработчиков
+ select count(r.role_name) from roles r 
+ 	join roles_employee re on re.role_id =r.id 
+ 	join employees e on re.employee_id = e.id 
+ 		where r.role_name like '%developer%';
 -- 28. Вывести фонд (сумму) зарплаты разработчиков.
+ select sum(s.monthly_salary) from salary s 
+ 	join employee_salary es on s.id = es.salary_id 
+ 	join roles_employee re on es.employee_id = re.role_id 
+ 	join roles r on re.role_id = r.id 
+ 		where r.role_name like '%developer%';
 -- 29. Вывести имена, должности и ЗП всех специалистов по возрастанию
+ select e.employee_name, r.role_name, s.monthly_salary 
+ 	from salary s left join employee_salary es on s.id = es.salary_id 
+ 	left join employees e on es.employee_id = e.id 
+ 	left join roles_employee re on re.employee_id =e.id 
+ 	left join roles r on re.role_id =r.id 
+ 	order by s.monthly_salary desc ;
+--  выдвет null в role_name!!!!
 -- 30. Вывести имена, должности и ЗП всех специалистов по возрастанию у специалистов у которых ЗП от 1700 до 2300
 -- 31. Вывести имена, должности и ЗП всех специалистов по возрастанию у специалистов у которых ЗП меньше 2300
 -- 32. Вывести имена, должности и ЗП всех специалистов по возрастанию у специалистов у которых ЗП равна 1100, 1500, 2000
